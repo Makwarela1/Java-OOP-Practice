@@ -4,7 +4,7 @@ public class BankAccount {
     private String accountNumber;
     private String accountHolder;
     private double balance;
-    public double newBalance;
+    private double newBalance;
 
     BankAccount( String accountNumber, String accountHolder, double balance){
         this.accountNumber = accountNumber;
@@ -27,7 +27,7 @@ public class BankAccount {
     public void deposit (double amount){
         if (amount >= 0){
             balance = balance + amount;
-            System.out.println("Deposit successful: R" + " " + balance);
+            System.out.println("Deposit successful: R" + " " + getBalance());
         } else {
             System.out.println("Deposit unsuccessful");
         }
@@ -48,9 +48,9 @@ public class BankAccount {
 
 
     public void displayAccountDetails(){
-        System.out.println("Account holder: " + accountHolder);
-        System.out.println("Account number: " + accountNumber);
-        System.out.println("Current balance: " + balance);
+        System.out.println("Account holder: " + getAccountHolder());
+        System.out.println("Account number: " + getAccountNumber());
+        System.out.println("Current balance: " + getBalance());
 
     }
 

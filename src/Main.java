@@ -8,6 +8,12 @@ public class Main {
         account1.deposit(500);
         account1.withdraw(1000);
 
+        /*
+        Junior-developer challenge: Explain why making balance public would be a problem
+        Making balance public in a real world scenario means that your balance would be accessible
+        by anybody, and they can have access to change it as well.
+         */
+
 
 
     }
