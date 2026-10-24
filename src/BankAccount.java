@@ -50,9 +50,12 @@ public class BankAccount {
 
 
     public void displayAccountDetails(){
+        System.out.println("EMPLOYEE DETAILS:");
+        System.out.println("-----------------------------------------------------");
         System.out.println("Account holder: " + getAccountHolder());
         System.out.println("Account number: " + getAccountNumber());
         System.out.println("Current balance: " + getBalance());
+        System.out.println("-----------------------------------------------------");
 
     }
 
