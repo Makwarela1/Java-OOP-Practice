@@ -1,15 +1,17 @@
-import jdk.swing.interop.SwingInterOpUtils;
+
 
 public class BankAccount {
     private String accountNumber;
     private String accountHolder;
     private double balance;
-    private double newBalance;
 
-    BankAccount( String accountNumber, String accountHolder, double balance){
+    public BankAccount( String accountNumber, String accountHolder, double balance){
         this.accountNumber = accountNumber;
         this.accountHolder = accountHolder;
         this.balance = balance;
+        if (balance <= 0){
+            System.out.println("Invalid amount");
+        }
     }
     public String getAccountNumber(){
         return accountNumber;
@@ -25,11 +27,11 @@ public class BankAccount {
 
     // add the checks
     public void deposit (double amount){
-        if (amount >= 0){
-            balance = balance + amount;
-            System.out.println("Deposit successful: R" + " " + getBalance());
+        if(amount <= 0){
+            System.out.println("Invalid deposit amount");
         } else {
-            System.out.println("Deposit unsuccessful");
+            balance = balance + amount;
+            System.out.println("Deposit successful: R" + getBalance());
         }
 
     }
@@ -40,8 +42,8 @@ public class BankAccount {
         } else if( amount > balance) {
             System.out.println("Insufficient funds");
         } else {
-            newBalance = balance - amount;
-            System.out.println("New balance: R" + newBalance);
+            balance = balance - amount;
+            System.out.println("New balance: R" + balance);
         }
     }
 

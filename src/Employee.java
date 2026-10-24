@@ -13,6 +13,9 @@ public class Employee {
     public String getName(){return name;}
     public double getMonthlySalary(){return monthlySalary;}
 
+    public void increaseSalary(double percentage){
+
+    }
 
 
 }
