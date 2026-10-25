@@ -35,6 +35,18 @@ public class Main {
         employee3.displayPaySlip();
         employee3.increaseSalary(0);
         employee3.calcualteAnnualSalary();
+        System.out.println();
+
+        PermanentEmployee emp1 = new PermanentEmployee("Thabo", "P101", 25000, 1200);
+        ContractEmployee emp2 = new ContractEmployee("Lerato", "C201", 18000, 12);
+        System.out.println("EMPLOYEE DETAILS:");
+        emp1.displayDetails();
+        System.out.println();
+        emp2.displayDetails();
+
+
+
+
 
 
 
